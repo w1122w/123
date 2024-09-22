@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>لعبة المغامرات</title>
+    <style>
+        /* إعدادات عامة */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+            scroll-behavior: smooth;
+        }
+
+        body {
+            background-color: #001f52;
+            color: #fff;
+            overflow-x: hidden;
+        }
+
+        /* خلفية فيديو */
+        .bg-video {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            z-index: -1;
+        }
+
+        /* الشعار */
+        .main-logo {
+            max-width: 200px;
+            margin: 20px auto;
+            display: block;
+            z-index: 100;
+            position: relative;
+        }
+
+        /* التنقل */
+        .navigation {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+            background-color: rgba(0, 0, 0, 0.5);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .menu {
+            display: flex;
+            list-style: none;
+            gap: 20px;
+        }
+
+        .menu li a {
+            color: #fff;
+            text-decoration: none;
+            font-size: 1.2rem;
+            padding: 10px 20px;
+            border: 2px solid #fff;
+            border-radius: 5px;
+            transition: 0.3s;
+        }
+
+        .menu li a:hover {
+            background-color: #02e3ff;
+            color: #001f52;
+        }
+
+        /* زر اللعب */
+        .main-play-btn {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 50px auto;
+            background: linear-gradient(45deg, #02e3ff, #1c90fe);
+            width: 200px;
+            height: 60px;
+            color: #fff;
+            font-size: 1.5rem;
+            border-radius: 10px;
+            cursor: pointer;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+            text-transform: uppercase;
+            transition: transform 0.3s;
+        }
+
+        .main-play-btn:hover {
+            transform: scale(1.1);
+        }
+
+        /* وسائل التواصل الاجتماعي */
+        .main-social {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            z-index: 100;
+        }
+
+        .main-social a {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 50px;
+            height: 50px;
+            color: #fff;
+            border-radius: 50%;
+            font-size: 1.5rem;
+            transition: 0.3s;
+            background-color: rgba(255, 255, 255, 0.2);
+        }
+
+        .main-social a:hover {
+            transform: scale(1.1);
+            background-color: rgba(255, 255, 255, 0.5);
+        }
+
+        .youtube-icon { background-color: #be0000; }
+        .twitter-icon { background-color: #1da1f2; }
+        .insta-icon { background-color: #e4405f; }
+    </style>
+</head>
+<body>
+
+    <!-- خلفية فيديو -->
+    <video class="bg-video" autoplay loop muted>
+        <source src="https://www.w3schools.com/howto/rain.mp4" type="video/mp4">
+    </video>
+
+    <!-- الشعار -->
+    <img src="https://via.placeholder.com/200x80?text=Logo" alt="Logo" class="main-logo">
+
+    <!-- التنقل -->
+    <nav class="navigation">
+        <ul class="menu">
+            <li><a href="#home">الرئيسية</a></li>
+            <li><a href="#about">عن اللعبة</a></li>
+            <li><a href="#features">المميزات</a></li>
+            <li><a href="#contact">تواصل معنا</a></li>
+        </ul>
+    </nav>
+
+    <!-- زر اللعب -->
+    <div class="main-play-btn">
+        العب الآن
+    </div>
+
+    <!-- أيقونات التواصل الاجتماعي -->
+    <div class="main-social">
+        <a href="#" class="youtube-icon"><i class="fab fa-youtube"></i></a>
+        <a href="#" class="twitter-icon"><i class="fab fa-twitter"></i></a>
+        <a href="#" class="insta-icon"><i class="fab fa-instagram"></i></a>
+    </div>
+
+    <!-- اضافة FontAwesome للرموز -->
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+</body>
+</html>
